@@ -19,7 +19,11 @@ jobs:
 
       - name: Install Libraries
         run: |
-          arduino-cli lib install "Arduino_GFX"
+        - name: Install Arduino GFX manually
+  run: |
+    git clone https://github.com/moononournation/Arduino_GFX.git
+    mkdir -p ~/Arduino/libraries
+    mv Arduino_GFX ~/Arduino/libraries/
       - name: Compile
         run: |
           arduino-cli compile \
