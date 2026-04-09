@@ -19,8 +19,7 @@ jobs:
 
       - name: Install Libraries
         run: |
-          arduino-cli lib install "Arduino GFX Library"
-
+          arduino-cli lib install "Arduino_GFX"
       - name: Compile
         run: |
           arduino-cli compile \
